@@ -1,0 +1,10 @@
+project: dhall-rust
+target: parse-dhall
+
+cmds:
+  - cmd: /mayhem/parse_dhall
+    libfuzzer: true
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parse-dhall/testsuite
